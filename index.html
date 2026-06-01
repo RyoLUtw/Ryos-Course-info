@@ -1,0 +1,1350 @@
+<!doctype html>
+<html lang="zh-Hant">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>IELTS Diagnosis Course | 1-on-1 Tutoring</title>
+  <meta name="description" content="A bilingual introduction page for a 1-on-1 IELTS tutoring course that diagnoses the real cause behind score plateaus before training.">
+  <style>
+    :root {
+      --bg: #f7fbfb;
+      --paper: #ffffff;
+      --ink: #17323a;
+      --muted: #5f7378;
+      --line: #d9e8e8;
+      --aqua: #49b9bd;
+      --mint: #dff5f0;
+      --navy: #153b63;
+      --soft-blue: #edf7fb;
+      --gold: #d7a642;
+      --shadow: 0 18px 45px rgba(35, 88, 92, 0.12);
+    }
+
+    * {
+      box-sizing: border-box;
+    }
+
+    html {
+      scroll-behavior: smooth;
+    }
+
+    body {
+      margin: 0;
+      color: var(--ink);
+      background:
+        radial-gradient(circle at top left, rgba(73, 185, 189, 0.16), transparent 34rem),
+        linear-gradient(180deg, #fbfefe 0%, var(--bg) 42%, #ffffff 100%);
+      font-family: Inter, "Noto Sans TC", "PingFang TC", "Microsoft JhengHei", Arial, sans-serif;
+      line-height: 1.65;
+    }
+
+    img {
+      max-width: 100%;
+      display: block;
+    }
+
+    a {
+      color: inherit;
+    }
+
+    .shell {
+      width: min(1120px, calc(100% - 40px));
+      margin: 0 auto;
+    }
+
+    .topbar {
+      position: sticky;
+      top: 0;
+      z-index: 20;
+      background: rgba(247, 251, 251, 0.86);
+      border-bottom: 1px solid rgba(217, 232, 232, 0.9);
+      backdrop-filter: blur(16px);
+    }
+
+    .nav {
+      min-height: 72px;
+      display: flex;
+      align-items: center;
+      justify-content: space-between;
+      gap: 20px;
+    }
+
+    .brand {
+      display: flex;
+      align-items: center;
+      gap: 12px;
+      font-weight: 760;
+      letter-spacing: 0;
+    }
+
+    .brand-mark {
+      width: 38px;
+      height: 38px;
+      border-radius: 8px;
+      display: grid;
+      place-items: center;
+      color: var(--navy);
+      background: linear-gradient(135deg, #e8fbf7, #ffffff);
+      border: 1px solid var(--line);
+      box-shadow: 0 8px 20px rgba(73, 185, 189, 0.14);
+      font-size: 18px;
+    }
+
+    .nav-links {
+      display: flex;
+      align-items: center;
+      gap: 14px;
+      color: var(--muted);
+      font-size: 14px;
+    }
+
+    .nav-links a {
+      text-decoration: none;
+      padding: 8px 2px;
+    }
+
+    .language-controls {
+      display: flex;
+      border: 1px solid var(--line);
+      border-radius: 8px;
+      padding: 3px;
+      background: var(--paper);
+    }
+
+    .language-controls button {
+      border: 0;
+      border-radius: 6px;
+      background: transparent;
+      color: var(--muted);
+      padding: 8px 11px;
+      font: inherit;
+      font-size: 13px;
+      cursor: pointer;
+    }
+
+    .language-controls button.is-active {
+      color: var(--ink);
+      background: var(--mint);
+    }
+
+    .hero {
+      padding: 70px 0 44px;
+    }
+
+    .hero-grid {
+      display: grid;
+      grid-template-columns: 1fr;
+      gap: 46px;
+      align-items: center;
+    }
+
+    .kicker {
+      display: inline-flex;
+      align-items: center;
+      gap: 9px;
+      color: var(--navy);
+      background: rgba(223, 245, 240, 0.85);
+      border: 1px solid rgba(73, 185, 189, 0.25);
+      border-radius: 8px;
+      padding: 8px 11px;
+      font-size: 14px;
+      font-weight: 700;
+    }
+
+    h1,
+    h2,
+    h3 {
+      margin: 0;
+      line-height: 1.16;
+      letter-spacing: 0;
+    }
+
+    h1 {
+      margin-top: 22px;
+      font-size: clamp(38px, 6vw, 72px);
+      max-width: 760px;
+      color: #102f36;
+    }
+
+    h2 {
+      font-size: clamp(28px, 4vw, 44px);
+      color: #123238;
+    }
+
+    h3 {
+      font-size: 22px;
+      color: #17343a;
+    }
+
+    .hero-copy {
+      margin: 24px 0 0;
+      max-width: 690px;
+      color: var(--muted);
+      font-size: 18px;
+    }
+
+    .hero-actions {
+      display: flex;
+      flex-wrap: wrap;
+      gap: 12px;
+      margin-top: 30px;
+    }
+
+    .button {
+      min-height: 46px;
+      display: inline-flex;
+      align-items: center;
+      justify-content: center;
+      gap: 9px;
+      border-radius: 8px;
+      border: 1px solid var(--line);
+      padding: 11px 18px;
+      text-decoration: none;
+      font-weight: 740;
+    }
+
+    .button.primary {
+      color: #ffffff;
+      background: var(--navy);
+      border-color: var(--navy);
+      box-shadow: 0 12px 26px rgba(21, 59, 99, 0.18);
+    }
+
+    .button.secondary {
+      color: var(--ink);
+      background: var(--paper);
+    }
+
+    .hero-media {
+      position: relative;
+      border-radius: 8px;
+      overflow: hidden;
+      background: #ffffff;
+      border: 1px solid rgba(217, 232, 232, 0.92);
+      box-shadow: var(--shadow);
+      aspect-ratio: 4 / 3;
+    }
+
+    .method-visual {
+      margin-top: 22px;
+      aspect-ratio: 16 / 7;
+    }
+
+    .hero-media img {
+      width: 100%;
+      height: 100%;
+      object-fit: cover;
+    }
+
+    .chart-strip {
+      position: absolute;
+      left: 18px;
+      right: 18px;
+      bottom: 18px;
+      display: grid;
+      grid-template-columns: repeat(3, 1fr);
+      gap: 10px;
+    }
+
+    .metric {
+      min-height: 78px;
+      padding: 12px;
+      border-radius: 8px;
+      background: rgba(255, 255, 255, 0.88);
+      border: 1px solid rgba(217, 232, 232, 0.9);
+      backdrop-filter: blur(12px);
+    }
+
+    .metric span {
+      display: block;
+      color: var(--muted);
+      font-size: 12px;
+      line-height: 1.35;
+    }
+
+    .metric strong {
+      display: block;
+      margin-top: 5px;
+      color: var(--navy);
+      font-size: 20px;
+      line-height: 1.1;
+    }
+
+    section {
+      padding: 64px 0;
+    }
+
+    .section-head {
+      display: grid;
+      grid-template-columns: minmax(0, 0.82fr) minmax(260px, 0.5fr);
+      gap: 34px;
+      align-items: end;
+      margin-bottom: 28px;
+    }
+
+    .section-head p {
+      margin: 0;
+      color: var(--muted);
+    }
+
+    .two-col {
+      display: grid;
+      grid-template-columns: repeat(2, minmax(0, 1fr));
+      gap: 18px;
+    }
+
+    .symptom-layout {
+      display: grid;
+      grid-template-columns: minmax(0, 0.95fr) minmax(280px, 0.62fr);
+      gap: 18px;
+      align-items: stretch;
+    }
+
+    .panel {
+      border: 1px solid var(--line);
+      border-radius: 8px;
+      background: rgba(255, 255, 255, 0.88);
+      box-shadow: 0 12px 34px rgba(35, 88, 92, 0.07);
+    }
+
+    .panel-pad {
+      padding: 24px;
+    }
+
+    .symptom-list,
+    .check-list {
+      display: grid;
+      gap: 12px;
+      margin: 0;
+      padding: 0;
+      list-style: none;
+    }
+
+    .symptom-list li,
+    .check-list li {
+      position: relative;
+      padding-left: 30px;
+      color: #27464d;
+    }
+
+    .symptom-list li::before,
+    .check-list li::before {
+      content: "";
+      position: absolute;
+      left: 0;
+      top: 0.52em;
+      width: 14px;
+      height: 14px;
+      border-radius: 4px;
+      background: var(--mint);
+      border: 1px solid rgba(73, 185, 189, 0.42);
+    }
+
+    .check-list li::after {
+      content: "";
+      position: absolute;
+      left: 4px;
+      top: calc(0.52em + 3px);
+      width: 6px;
+      height: 3px;
+      border-left: 2px solid var(--aqua);
+      border-bottom: 2px solid var(--aqua);
+      transform: rotate(-45deg);
+    }
+
+    .symptom-options {
+      display: grid;
+      gap: 0;
+      margin: 0;
+      padding: 0;
+      list-style: none;
+    }
+
+    .symptom-option {
+      border-bottom: 1px solid var(--line);
+    }
+
+    .symptom-option:last-child {
+      border-bottom: 0;
+    }
+
+    .symptom-option label {
+      display: grid;
+      grid-template-columns: 22px 1fr;
+      gap: 12px;
+      align-items: start;
+      padding: 16px 0;
+      color: #27464d;
+      cursor: pointer;
+    }
+
+    .symptom-option input {
+      width: 18px;
+      height: 18px;
+      margin: 3px 0 0;
+      accent-color: var(--aqua);
+    }
+
+    .feedback-panel {
+      min-height: 100%;
+      padding: 24px;
+      background: var(--navy);
+      color: #ffffff;
+    }
+
+    .feedback-panel h3 {
+      color: #ffffff;
+    }
+
+    .feedback-panel p {
+      margin: 10px 0 0;
+      color: rgba(255, 255, 255, 0.74);
+    }
+
+    .feedback-list {
+      display: grid;
+      gap: 12px;
+      margin-top: 18px;
+    }
+
+    .feedback-item {
+      padding: 12px 14px;
+      border-radius: 8px;
+      background: rgba(255, 255, 255, 0.1);
+      border: 1px solid rgba(255, 255, 255, 0.16);
+      color: rgba(255, 255, 255, 0.9);
+    }
+
+    .guided-prompt {
+      margin-top: 18px;
+      padding-top: 18px;
+      border-top: 1px solid rgba(255, 255, 255, 0.18);
+    }
+
+    .guided-prompt p {
+      margin: 0 0 14px;
+      color: #ffffff;
+      font-size: 20px;
+      font-weight: 780;
+    }
+
+    .guided-actions {
+      display: flex;
+      flex-wrap: wrap;
+      gap: 12px;
+      margin-top: 24px;
+    }
+
+    .button.light {
+      color: var(--navy);
+      background: #ffffff;
+      border-color: #ffffff;
+    }
+
+    .guided-hidden {
+      display: none;
+    }
+
+    .split-band {
+      background: linear-gradient(180deg, rgba(237, 247, 251, 0.75), rgba(247, 251, 251, 0));
+      border-top: 1px solid rgba(217, 232, 232, 0.78);
+      border-bottom: 1px solid rgba(217, 232, 232, 0.55);
+    }
+
+    .diagnosis {
+      display: grid;
+      grid-template-columns: minmax(260px, 0.62fr) minmax(0, 1fr);
+      gap: 22px;
+      align-items: stretch;
+    }
+
+    .diagnosis-card {
+      padding: 28px;
+      border-radius: 8px;
+      background: var(--navy);
+      color: #ffffff;
+      box-shadow: 0 18px 45px rgba(21, 59, 99, 0.18);
+    }
+
+    .diagnosis-card h2,
+    .diagnosis-card h3 {
+      color: #ffffff;
+    }
+
+    .diagnosis-card p {
+      color: rgba(255, 255, 255, 0.78);
+      margin: 16px 0 0;
+    }
+
+    .diagnosis-card .check-list {
+      margin-top: 18px;
+    }
+
+    .diagnosis-card .check-list li {
+      color: rgba(255, 255, 255, 0.9);
+    }
+
+    .diagnosis-card .check-list li::before {
+      background: rgba(255, 255, 255, 0.12);
+      border-color: rgba(255, 255, 255, 0.32);
+    }
+
+    .diagnosis-card .check-list li::after {
+      border-color: #9ce7df;
+    }
+
+    .diagnosis-visual {
+      min-height: 100%;
+      border-radius: 8px;
+      overflow: hidden;
+      border: 1px solid rgba(217, 232, 232, 0.92);
+      box-shadow: var(--shadow);
+      background: #ffffff;
+    }
+
+    .diagnosis-visual img {
+      width: 100%;
+      height: 100%;
+      min-height: 330px;
+      object-fit: cover;
+    }
+
+    .vitals {
+      display: grid;
+      gap: 14px;
+      padding: 24px;
+    }
+
+    .vital-row {
+      display: grid;
+      grid-template-columns: 150px 1fr;
+      gap: 16px;
+      align-items: center;
+      padding: 14px 0;
+      border-bottom: 1px solid var(--line);
+    }
+
+    .vital-row:last-child {
+      border-bottom: 0;
+    }
+
+    .vital-row b {
+      color: var(--navy);
+      font-size: 14px;
+      text-transform: uppercase;
+      letter-spacing: 0.04em;
+    }
+
+    .vital-row span {
+      color: var(--muted);
+    }
+
+    .method-grid {
+      display: grid;
+      grid-template-columns: repeat(3, minmax(0, 1fr));
+      gap: 18px;
+    }
+
+    .method-step {
+      padding: 24px;
+    }
+
+    .step-number {
+      width: 38px;
+      height: 38px;
+      display: grid;
+      place-items: center;
+      border-radius: 8px;
+      color: var(--navy);
+      background: var(--soft-blue);
+      border: 1px solid var(--line);
+      font-weight: 800;
+    }
+
+    .method-step h3 {
+      margin-top: 18px;
+    }
+
+    .method-step p {
+      margin: 12px 0 0;
+      color: var(--muted);
+    }
+
+    .skills-grid {
+      display: grid;
+      grid-template-columns: repeat(2, minmax(0, 1fr));
+      gap: 18px;
+    }
+
+    .skill-card {
+      display: grid;
+      grid-template-rows: auto 1fr;
+      overflow: hidden;
+    }
+
+    .skill-head {
+      padding: 22px 24px;
+      background: linear-gradient(135deg, rgba(223, 245, 240, 0.95), rgba(237, 247, 251, 0.92));
+      border-bottom: 1px solid var(--line);
+    }
+
+    .skill-head p {
+      margin: 8px 0 0;
+      color: var(--muted);
+    }
+
+    .skill-body {
+      display: grid;
+      grid-template-columns: repeat(2, minmax(0, 1fr));
+      gap: 18px;
+      padding: 24px;
+    }
+
+    .skill-body.treatment-body {
+      display: block;
+    }
+
+    .mini-title {
+      display: flex;
+      align-items: center;
+      gap: 8px;
+      margin-bottom: 10px;
+      color: var(--navy);
+      font-weight: 800;
+    }
+
+    .mini-title::before {
+      content: "";
+      width: 9px;
+      height: 9px;
+      border-radius: 50%;
+      background: var(--gold);
+    }
+
+    .compact-list {
+      display: grid;
+      gap: 8px;
+      margin: 0;
+      padding-left: 18px;
+      color: var(--muted);
+    }
+
+    .compact-list li::marker {
+      color: var(--aqua);
+    }
+
+    .treatment-pairs {
+      display: grid;
+      gap: 10px;
+    }
+
+    .treatment-pair {
+      display: grid;
+      grid-template-columns: minmax(0, 1fr) minmax(0, 1fr);
+      gap: 14px;
+      align-items: stretch;
+      padding: 12px;
+      border: 1px solid var(--line);
+      border-radius: 8px;
+      background: #ffffff;
+    }
+
+    .treatment-pair b {
+      display: block;
+      margin-bottom: 5px;
+      color: var(--navy);
+      font-size: 13px;
+    }
+
+    .treatment-pair span {
+      color: var(--muted);
+    }
+
+    .outcome-band {
+      background: #ffffff;
+    }
+
+    .outcomes {
+      display: grid;
+      grid-template-columns: minmax(0, 0.9fr) minmax(280px, 0.58fr);
+      gap: 24px;
+      align-items: center;
+    }
+
+    .outcome-list {
+      display: grid;
+      grid-template-columns: repeat(2, minmax(0, 1fr));
+      gap: 12px;
+      margin-top: 24px;
+    }
+
+    .outcome-pill {
+      min-height: 70px;
+      display: flex;
+      align-items: center;
+      gap: 12px;
+      padding: 14px;
+      border: 1px solid var(--line);
+      border-radius: 8px;
+      background: var(--paper);
+    }
+
+    .outcome-pill span {
+      flex: 0 0 28px;
+      height: 28px;
+      display: grid;
+      place-items: center;
+      border-radius: 8px;
+      color: var(--navy);
+      background: var(--mint);
+      font-weight: 900;
+    }
+
+    .quote-panel {
+      padding: 28px;
+      background: var(--navy);
+      color: #ffffff;
+      box-shadow: 0 18px 45px rgba(21, 59, 99, 0.18);
+    }
+
+    .quote-panel p {
+      margin: 0;
+      color: rgba(255, 255, 255, 0.82);
+      font-size: 18px;
+    }
+
+    .cta {
+      padding: 54px 0 76px;
+    }
+
+    .cta-box {
+      display: grid;
+      grid-template-columns: minmax(0, 1fr) auto;
+      gap: 24px;
+      align-items: center;
+      padding: 30px;
+      border-radius: 8px;
+      background: linear-gradient(135deg, #ffffff, #eefaf8);
+      border: 1px solid var(--line);
+      box-shadow: var(--shadow);
+    }
+
+    .cta-box p {
+      margin: 10px 0 0;
+      color: var(--muted);
+    }
+
+    .lang-en,
+    .lang-zh {
+      transition: opacity 160ms ease;
+    }
+
+    body.show-zh .lang-en,
+    body.show-en .lang-zh {
+      display: none;
+    }
+
+    .pair {
+      display: grid;
+      gap: 7px;
+    }
+
+    .pair .lang-en {
+      color: var(--muted);
+    }
+
+    @media (max-width: 920px) {
+      .hero-grid,
+      .section-head,
+      .diagnosis,
+      .symptom-layout,
+      .outcomes,
+      .cta-box {
+        grid-template-columns: 1fr;
+      }
+
+      .method-grid,
+      .skills-grid {
+        grid-template-columns: 1fr;
+      }
+
+      .nav {
+        align-items: flex-start;
+        flex-direction: column;
+        padding: 16px 0;
+      }
+
+      .nav-links {
+        width: 100%;
+        justify-content: space-between;
+      }
+    }
+
+    @media (max-width: 680px) {
+      .shell {
+        width: min(100% - 28px, 1120px);
+      }
+
+      .hero {
+        padding-top: 44px;
+      }
+
+      section {
+        padding: 46px 0;
+      }
+
+      .two-col,
+      .skill-body,
+      .outcome-list {
+        grid-template-columns: 1fr;
+      }
+
+      .treatment-pair {
+        grid-template-columns: 1fr;
+      }
+
+      .chart-strip {
+        grid-template-columns: 1fr;
+      }
+
+      .hero-media {
+        aspect-ratio: 1 / 1.08;
+      }
+
+      .vital-row {
+        grid-template-columns: 1fr;
+        gap: 5px;
+      }
+
+      .nav-links {
+        align-items: flex-start;
+        flex-direction: column;
+        gap: 8px;
+      }
+
+      .language-controls {
+        width: 100%;
+      }
+
+      .language-controls button {
+        flex: 1;
+      }
+
+      .cta-box {
+        padding: 22px;
+      }
+    }
+  </style>
+</head>
+<body class="show-zh">
+  <header class="topbar">
+    <div class="shell nav">
+      <div class="brand" aria-label="IELTS Diagnosis Course">
+        <span class="brand-mark">Rx</span>
+        <span>IELTS Diagnosis Course</span>
+      </div>
+      <nav class="nav-links" aria-label="Page navigation">
+        <a href="#symptoms">Symptoms</a>
+        <a href="#method">Method</a>
+        <a href="#skills">Skills</a>
+        <div class="language-controls" aria-label="Language display">
+          <button type="button" class="is-active" data-lang="zh">中文</button>
+          <button type="button" data-lang="en">EN</button>
+        </div>
+      </nav>
+    </div>
+  </header>
+
+  <main>
+    <section class="hero">
+      <div class="shell hero-grid">
+        <div>
+          <div class="kicker">
+            <span class="lang-zh">1 對 1 IELTS 能力診斷與訓練</span>
+            <span class="lang-en">1-on-1 IELTS Diagnosis and Training</span>
+          </div>
+          <h1>
+            <span class="lang-zh">IELTS 分數一直卡住？先找出真正原因。</span>
+            <span class="lang-en">IELTS score stuck? Diagnose the real cause first.</span>
+          </h1>
+          <p class="hero-copy pair">
+            <span class="lang-zh">如果你已經刷了很多題，卻還是卡在 Band 5-6，問題可能不是不夠努力，而是你一直在處理表面症狀。</span>
+            <span class="lang-en">If you have done many practice tests but remain around Band 5-6, the problem may not be effort. You may be treating symptoms instead of the real cause.</span>
+          </p>
+          <div class="hero-actions">
+            <a class="button primary" href="#method">
+              <span class="lang-zh">查看課程方法</span>
+              <span class="lang-en">View the Method</span>
+            </a>
+            <a class="button secondary" href="#skills">
+              <span class="lang-zh">看四科訓練</span>
+              <span class="lang-en">Explore Skill Training</span>
+            </a>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <section id="symptoms">
+      <div class="shell">
+        <div class="section-head">
+          <h2>
+            <span class="lang-zh">你是不是也遇過這些情況？</span>
+            <span class="lang-en">Do these symptoms sound familiar?</span>
+          </h2>
+        </div>
+        <div class="symptom-layout">
+          <div class="panel panel-pad">
+            <ul class="symptom-options">
+              <li class="symptom-option">
+                <label>
+                  <input type="checkbox" data-feedback-zh="也許核心問題是閱讀理解與推理方式，不是題目做得不夠多。" data-feedback-en="Perhaps the core issue is reading comprehension and reasoning, not too few practice questions.">
+                  <span class="pair">
+                    <span class="lang-zh">做了很多閱讀題目，分數卻一直沒有明顯進步。</span>
+                    <span class="lang-en">You do many reading exercises, but your score does not clearly improve.</span>
+                  </span>
+                </label>
+              </li>
+              <li class="symptom-option">
+                <label>
+                  <input type="checkbox" data-feedback-zh="也許核心問題是語音辨識與聽重點的方法，不是聽力時間不夠。" data-feedback-en="Perhaps the core issue is sound recognition and listening for key points, not too little listening time.">
+                  <span class="pair">
+                    <span class="lang-zh">聽力練了很久，但只要不是考試錄音，就聽不太懂真實英文。</span>
+                    <span class="lang-en">You practice listening for a long time, but real English still feels hard outside test recordings.</span>
+                  </span>
+                </label>
+              </li>
+              <li class="symptom-option">
+                <label>
+                  <input type="checkbox" data-feedback-zh="也許核心問題是想法展開與文章組織，不是模板背得不夠多。" data-feedback-en="Perhaps the core issue is idea development and organization, not too few memorized templates.">
+                  <span class="pair">
+                    <span class="lang-zh">寫作背了很多模板，卻還是不知道自己的想法要怎麼寫出來。</span>
+                    <span class="lang-en">You memorize writing templates, but still struggle to express your own ideas.</span>
+                  </span>
+                </label>
+              </li>
+              <li class="symptom-option">
+                <label>
+                  <input type="checkbox" data-feedback-zh="也許核心問題是即時組織想法，不是題庫準備得不夠熟。" data-feedback-en="Perhaps the core issue is organizing ideas in real time, not insufficient question-bank practice.">
+                  <span class="pair">
+                    <span class="lang-zh">口說練了很多題庫，但只要題目一變，就不知道該說什麼。</span>
+                    <span class="lang-en">You practice speaking question banks, but freeze when the question changes.</span>
+                  </span>
+                </label>
+              </li>
+            </ul>
+          </div>
+          <aside class="panel feedback-panel" aria-live="polite">
+            <div class="feedback-list" id="feedbackList"></div>
+            <div class="guided-prompt guided-hidden" id="symptomNext">
+              <p>
+                <span class="lang-zh">你的學習也許生病了</span>
+                <span class="lang-en">Your learning may be unwell</span>
+              </p>
+              <button class="button light" type="button" data-reveal="#diagnosis-section">
+                <span class="lang-zh">問題在哪</span>
+                <span class="lang-en">What is the problem?</span>
+              </button>
+            </div>
+          </aside>
+        </div>
+      </div>
+    </section>
+
+    <section class="split-band guided-hidden" id="diagnosis-section">
+      <div class="shell diagnosis">
+        <div class="diagnosis-card">
+          <h2>
+            <span class="lang-zh">為什麼許多學生卡在 Band 5-6？</span>
+            <span class="lang-en">Why many students stay at Band 5-6</span>
+          </h2>
+          <p class="pair">
+            <span class="lang-zh">許多補習班、線上 IELTS 套裝課程專注於：</span>
+            <span class="lang-en">Many IELTS courses focus on:</span>
+          </p>
+          <ul class="check-list">
+            <li class="pair">
+              <span class="lang-zh">題型分析</span>
+              <span class="lang-en">Question-type analysis</span>
+            </li>
+            <li class="pair">
+              <span class="lang-zh">考試技巧</span>
+              <span class="lang-en">Test-taking techniques</span>
+            </li>
+            <li class="pair">
+              <span class="lang-zh">高分模板</span>
+              <span class="lang-en">High-score templates</span>
+            </li>
+            <li class="pair">
+              <span class="lang-zh">大量刷題</span>
+              <span class="lang-en">Large amounts of drilling</span>
+            </li>
+          </ul>
+          <p class="pair">
+            <span class="lang-zh">這些方法都像止痛藥一樣，只能抑制表面病徵，無法根除病因。5-6分的成績反映出學生在處理複雜資訊、即時組織想法和表達個人觀點方面有困難，這些都源自於基礎能力的不足，如果沒有針對性地訓練這些能力，就無法突破瓶頸。</span>
+            <span class="lang-en">These methods are like painkillers: they may suppress surface symptoms, but they cannot remove the root cause.</span>
+          </p>
+        </div>
+        <div class="diagnosis-visual">
+          <img src="assets/painkiller-metaphor.png" alt="A doctor offering pills beside a large pile of medication in a bright clinic">
+        </div>
+      </div>
+      <div class="shell guided-actions">
+        <button class="button primary" type="button" data-reveal="#method">
+          <span class="lang-zh">我該怎麼辦?</span>
+          <span class="lang-en">What should I do?</span>
+        </button>
+      </div>
+    </section>
+
+    <section id="method" class="guided-hidden">
+      <div class="shell">
+        <div class="section-head">
+          <h2>
+            <span class="lang-zh">就像看醫生一樣</span>
+            <span class="lang-en">Like seeing a good doctor</span>
+          </h2>
+          <p class="pair">
+            <span class="lang-zh">一直頭痛時，好的醫生不會只是不斷開止痛藥。他會先找出睡眠、壓力、眼睛、姿勢或更深層的原因。</span>
+            <span class="lang-en">When someone has constant headaches, a good doctor does not only prescribe more painkillers. They first check sleep, stress, eyes, posture, and deeper causes.</span>
+          </p>
+        </div>
+        <div class="method-grid">
+          <div class="panel method-step">
+            <div class="step-number">01</div>
+            <h3>
+              <span class="lang-zh">找出症狀</span>
+              <span class="lang-en">Identify Symptoms</span>
+            </h3>
+            <p class="pair">
+              <span class="lang-zh">看見分數卡住背後的重複錯誤和學習習慣。</span>
+              <span class="lang-en">Spot the repeated mistakes and study patterns behind the plateau.</span>
+            </p>
+          </div>
+          <div class="panel method-step">
+            <div class="step-number">02</div>
+            <h3>
+              <span class="lang-zh">診斷原因</span>
+              <span class="lang-en">Diagnose Causes</span>
+            </h3>
+            <p class="pair">
+              <span class="lang-zh">判斷真正卡住的是哪一個能力，而不是只看題目答案。</span>
+              <span class="lang-en">Find which ability is actually blocking progress, not just which answer is wrong.</span>
+            </p>
+          </div>
+          <div class="panel method-step">
+            <div class="step-number">03</div>
+            <h3>
+              <span class="lang-zh">對症訓練</span>
+              <span class="lang-en">Train Precisely</span>
+            </h3>
+            <p class="pair">
+              <span class="lang-zh">用正確的方法一步一步補能力，讓新題目也能應對。</span>
+              <span class="lang-en">Build the missing skill step by step, so new questions become manageable too.</span>
+            </p>
+          </div>
+        </div>
+        <div class="hero-media method-visual" aria-label="Clean IELTS diagnosis desk visual">
+          <img src="assets/ielts-diagnosis-hero.png" alt="Bright desk with IELTS study notes, a diagnostic checklist, and a stethoscope">
+          <div class="chart-strip" aria-hidden="true">
+            <div class="metric">
+              <span>Assessment</span>
+              <strong>Cause</strong>
+            </div>
+            <div class="metric">
+              <span>Training</span>
+              <strong>Skill</strong>
+            </div>
+            <div class="metric">
+              <span>Goal</span>
+              <strong>Use</strong>
+            </div>
+          </div>
+        </div>
+        <div class="guided-actions">
+          <button class="button primary" type="button" data-reveal="#skills">
+            <span class="lang-zh">Ryo老師的治療策略</span>
+            <span class="lang-en">Ryo's Treatment Strategy</span>
+          </button>
+        </div>
+      </div>
+    </section>
+
+    <section id="skills" class="split-band guided-hidden">
+      <div class="shell">
+        <div class="section-head">
+          <h2>
+            <span class="lang-zh">聽說讀寫訓練不該是刷題進度表，而是能力治療計畫</span>
+            <span class="lang-en">Four skills, trained like targeted treatment plans</span>
+          </h2>
+          <p class="pair">
+            <span class="lang-zh">我不只是告訴學生「這題答案是什麼」。我更重視為什麼會錯，以及真正卡住的是哪一個能力。</span>
+            <span class="lang-en">I do not only tell students what the answer is. I focus on why the mistake happened and which ability is blocking progress.</span>
+          </p>
+        </div>
+
+        <div class="skills-grid">
+          <article class="panel skill-card">
+            <div class="skill-head">
+              <h3>Reading | 閱讀</h3>
+              <p class="pair">
+                <span class="lang-zh">閱讀錯誤不一定只是看不懂英文。</span>
+                <span class="lang-en">Reading mistakes are not always just about not understanding English.</span>
+              </p>
+            </div>
+            <div class="skill-body treatment-body">
+              <div class="treatment-pairs">
+                <div class="treatment-pair">
+                  <div><b>先檢查</b><span class="pair"><span class="lang-zh">單字量是否不足？</span><span class="lang-en">Is vocabulary the bottleneck?</span></span></div>
+                  <div><b>再訓練</b><span class="pair"><span class="lang-zh">建立單字學習方法，讓單字真的能用在理解文意。</span><span class="lang-en">Build a vocabulary method that supports real text comprehension.</span></span></div>
+                </div>
+                <div class="treatment-pair">
+                  <div><b>先檢查</b><span class="pair"><span class="lang-zh">文法基礎是否不穩？</span><span class="lang-en">Is grammar unstable?</span></span></div>
+                  <div><b>再訓練</b><span class="pair"><span class="lang-zh">歸納理解文法，讀懂句子裡每個元素間的關係。</span><span class="lang-en">Strengthen grammar so sentence relationships become clear.</span></span></div>
+                </div>
+                <div class="treatment-pair">
+                  <div><b>先檢查</b><span class="pair"><span class="lang-zh">長句字太多，看了又看十幾遍還是不懂？</span><span class="lang-en">Are long sentences hard to break down?</span></span></div>
+                  <div><b>再訓練</b><span class="pair"><span class="lang-zh">練習解構技能，先抓主幹，再看修飾與補充資訊。</span><span class="lang-en">Practice long-sentence breakdown: main structure first, details second.</span></span></div>
+                </div>
+                <div class="treatment-pair">
+                  <div><b>先檢查</b><span class="pair"><span class="lang-zh">看得懂句子，卻推不出答案？</span><span class="lang-en">Do you understand the sentence but miss the answer logic?</span></span></div>
+                  <div><b>再訓練</b><span class="pair"><span class="lang-zh">重點資訊判斷，並一步一步推理出暗示什麼。</span><span class="lang-en">Train key-point judgment and step-by-step answer reasoning.</span></span></div>
+                </div>
+                <div class="treatment-pair">
+                  <div><b>先檢查</b><span class="pair"><span class="lang-zh">沒有掌握略讀、預測、掃讀的方法？</span><span class="lang-en">Are skimming, predicting, and scanning unclear?</span></span></div>
+                  <div><b>再訓練</b><span class="pair"><span class="lang-zh">用略讀找方向、預測文章邏輯、掃讀找細節。</span><span class="lang-en">Use skimming for direction, prediction for logic, and scanning for detail.</span></span></div>
+                </div>
+              </div>
+            </div>
+          </article>
+
+          <article class="panel skill-card">
+            <div class="skill-head">
+              <h3>Listening | 聽力</h3>
+              <p class="pair">
+                <span class="lang-zh">聽力練很久卻沒進步，常常是方法不對。</span>
+                <span class="lang-en">Long listening practice without progress often means the method is not working.</span>
+              </p>
+            </div>
+            <div class="skill-body treatment-body">
+              <div class="treatment-pairs">
+                <div class="treatment-pair">
+                  <div><b>先檢查</b><span class="pair"><span class="lang-zh">單字看得懂，卻聽不出來？</span><span class="lang-en">Can you read words but not recognize them by ear?</span></span></div>
+                  <div><b>再訓練</b><span class="pair"><span class="lang-zh">把聽力和單字一起練，建立聲音與意思的連結。</span><span class="lang-en">Train listening with vocabulary to connect sound and meaning.</span></span></div>
+                </div>
+                <div class="treatment-pair">
+                  <div><b>先檢查</b><span class="pair"><span class="lang-zh">不熟悉英文的連音和弱音？</span><span class="lang-en">Are linking and weak forms unfamiliar?</span></span></div>
+                  <div><b>再訓練</b><span class="pair"><span class="lang-zh">練習跟讀，改善語音辨識與節奏感。</span><span class="lang-en">Use shadowing to improve sound recognition and rhythm.</span></span></div>
+                </div>
+                <div class="treatment-pair">
+                  <div><b>先檢查</b><span class="pair"><span class="lang-zh">聽得到字，卻抓不到重點？</span><span class="lang-en">Do you hear words but miss the main point?</span></span></div>
+                  <div><b>再訓練</b><span class="pair"><span class="lang-zh">學習聽重點，而不是每個字都想聽懂。</span><span class="lang-en">Train listening for key points instead of every single word.</span></span></div>
+                </div>
+                <div class="treatment-pair">
+                  <div><b>先檢查</b><span class="pair"><span class="lang-zh">太依賴字幕？</span><span class="lang-en">Do you rely too much on subtitles?</span></span></div>
+                  <div><b>再訓練</b><span class="pair"><span class="lang-zh">把聽力和口說一起練，讓耳朵與嘴巴一起建立反應。</span><span class="lang-en">Connect listening with speaking so recognition becomes active.</span></span></div>
+                </div>
+                <div class="treatment-pair">
+                  <div><b>先檢查</b><span class="pair"><span class="lang-zh">平常練習方式沒有效果？</span><span class="lang-en">Is your regular practice ineffective?</span></span></div>
+                  <div><b>再訓練</b><span class="pair"><span class="lang-zh">練習整理筆記，建立適合自己的日常聽力訓練方法。</span><span class="lang-en">Practice note organization and build a personal daily listening routine.</span></span></div>
+                </div>
+              </div>
+            </div>
+          </article>
+
+          <article class="panel skill-card">
+            <div class="skill-head">
+              <h3>Writing | 寫作</h3>
+              <p class="pair">
+                <span class="lang-zh">寫作卡住常常不是文法問題，而是不知道內容如何展開。</span>
+                <span class="lang-en">Writing problems are often not only grammar problems. The bigger issue is developing content.</span>
+              </p>
+            </div>
+            <div class="skill-body treatment-body">
+              <div class="treatment-pairs">
+                <div class="treatment-pair">
+                  <div><b>先檢查</b><span class="pair"><span class="lang-zh">看不懂題目真正要問什麼？</span><span class="lang-en">Do you misread what the prompt is asking?</span></span></div>
+                  <div><b>再訓練</b><span class="pair"><span class="lang-zh">訓練審題，先判斷題目要求與回應方向。</span><span class="lang-en">Train prompt analysis to identify the task and response direction.</span></span></div>
+                </div>
+                <div class="treatment-pair">
+                  <div><b>先檢查</b><span class="pair"><span class="lang-zh">想不到自己的觀點？</span><span class="lang-en">Is it hard to form your own position?</span></span></div>
+                  <div><b>再訓練</b><span class="pair"><span class="lang-zh">從關鍵字出發，並把簡單想法寫得更完整。</span><span class="lang-en">Practice forming a view and developing simple ideas more fully.</span></span></div>
+                </div>
+                <div class="treatment-pair">
+                  <div><b>先檢查</b><span class="pair"><span class="lang-zh">理由太薄弱？</span><span class="lang-en">Are your reasons too thin?</span></span></div>
+                  <div><b>再訓練</b><span class="pair"><span class="lang-zh">漸進式揭露細節，讓論點更有說服力。</span><span class="lang-en">Train clearer reasoning so each paragraph has a developable point.</span></span></div>
+                </div>
+                <div class="treatment-pair">
+                  <div><b>先檢查</b><span class="pair"><span class="lang-zh">例子不夠清楚？</span><span class="lang-en">Are your examples unclear?</span></span></div>
+                  <div><b>再訓練</b><span class="pair"><span class="lang-zh">區分細節程度，避免過於模糊。</span><span class="lang-en">Use examples to support ideas instead of staying abstract.</span></span></div>
+                </div>
+                <div class="treatment-pair">
+                  <div><b>先檢查</b><span class="pair"><span class="lang-zh">段落安排混亂？</span><span class="lang-en">Is paragraph organization confusing?</span></span></div>
+                  <div><b>再訓練</b><span class="pair"><span class="lang-zh">繪製邏輯關聯圖，讓文章前後連貫。</span><span class="lang-en">Organize paragraphs so the essay flows coherently.</span></span></div>
+                </div>
+                <div class="treatment-pair">
+                  <div><b>先檢查</b><span class="pair"><span class="lang-zh">英文句子限制了想法表達？</span><span class="lang-en">Do English sentences limit your ideas?</span></span></div>
+                  <div><b>再訓練</b><span class="pair"><span class="lang-zh">按照英文句型結構來表達想法。</span><span class="lang-en">Use manageable sentence patterns to express complete ideas clearly.</span></span></div>
+                </div>
+              </div>
+            </div>
+          </article>
+
+          <article class="panel skill-card">
+            <div class="skill-head">
+              <h3>Speaking | 口說</h3>
+              <p class="pair">
+                <span class="lang-zh">口說不流利，不一定是英文太差，可能是想法和組織方式卡住。</span>
+                <span class="lang-en">Speaking fluency is not always about weak English. Ideas and organization may be the bottleneck.</span>
+              </p>
+            </div>
+            <div class="skill-body treatment-body">
+              <div class="treatment-pairs">
+                <div class="treatment-pair">
+                  <div><b>先檢查</b><span class="pair"><span class="lang-zh">單字和常用語句不夠？</span><span class="lang-en">Are vocabulary and useful phrases limited?</span></span></div>
+                  <div><b>再訓練</b><span class="pair"><span class="lang-zh">能快速內化的學習方法。</span><span class="lang-en">Build usable phrases and turn short answers into complete responses.</span></span></div>
+                </div>
+                <div class="treatment-pair">
+                  <div><b>先檢查</b><span class="pair"><span class="lang-zh">不知道怎麼延伸回答？</span><span class="lang-en">Do you struggle to extend answers?</span></span></div>
+                  <div><b>再訓練</b><span class="pair"><span class="lang-zh">解釋原因、舉例，讓回答自然變長。</span><span class="lang-en">Practice explaining reasons and giving examples in English.</span></span></div>
+                </div>
+                <div class="treatment-pair">
+                  <div><b>先檢查</b><span class="pair"><span class="lang-zh">不習慣表達自己的想法？</span><span class="lang-en">Are you unused to expressing your own ideas?</span></span></div>
+                  <div><b>再訓練</b><span class="pair"><span class="lang-zh">練習比較不同觀點，並在討論中自然回應。</span><span class="lang-en">Practice comparing viewpoints and responding naturally in discussion.</span></span></div>
+                </div>
+                <div class="treatment-pair">
+                  <div><b>先檢查</b><span class="pair"><span class="lang-zh">太依賴中文翻譯？</span><span class="lang-en">Do you depend too much on Chinese translation?</span></span></div>
+                  <div><b>再訓練</b><span class="pair"><span class="lang-zh">將單字關聯性融入單字學習。</span><span class="lang-en">Organize ideas quickly and build answers directly in English.</span></span></div>
+                </div>
+                <div class="treatment-pair">
+                  <div><b>先檢查</b><span class="pair"><span class="lang-zh">遇到陌生題目就緊張？</span><span class="lang-en">Do unfamiliar questions make you nervous?</span></span></div>
+                  <div><b>再訓練</b><span class="pair"><span class="lang-zh">如何將陌生資訊與過去經驗連結</span><span class="lang-en">Practice unprepared questions: organize first, then respond naturally.</span></span></div>
+                </div>
+                <div class="treatment-pair">
+                  <div><b>先檢查</b><span class="pair"><span class="lang-zh">平常缺少真正互動練習？</span><span class="lang-en">Do you lack real interaction practice?</span></span></div>
+                  <div><b>再訓練</b><span class="pair"><span class="lang-zh">找到把練習融入日常生活的辦法。</span><span class="lang-en">Use real Q&A and follow-up questions to train live responses.</span></span></div>
+                </div>
+              </div>
+            </div>
+          </article>
+        </div>
+      </div>
+    </section>
+
+    <section class="outcome-band guided-hidden after-skills">
+      <div class="shell outcomes">
+        <div>
+          <h2>
+            <span class="lang-zh">我想培養的，不只是 IELTS 分數</span>
+            <span class="lang-en">The goal is more than an IELTS score</span>
+          </h2>
+          <p class="hero-copy pair">
+            <span class="lang-zh">IELTS 成績很重要。但真正穩定的進步，不是來自無止盡刷題，而是來自找對問題，並一步一步把能力補起來。</span>
+            <span class="lang-en">The IELTS score matters. But stable progress does not come from endless drilling. It comes from finding the right problem and rebuilding the ability step by step.</span>
+          </p>
+          <div class="outcome-list">
+            <div class="outcome-pill"><span>1</span><div class="pair"><span class="lang-zh">看懂文章的能力</span><span class="lang-en">Understand written texts</span></div></div>
+            <div class="outcome-pill"><span>2</span><div class="pair"><span class="lang-zh">聽懂英文的能力</span><span class="lang-en">Understand spoken English</span></div></div>
+            <div class="outcome-pill"><span>3</span><div class="pair"><span class="lang-zh">清楚寫出想法的能力</span><span class="lang-en">Write clear ideas</span></div></div>
+            <div class="outcome-pill"><span>4</span><div class="pair"><span class="lang-zh">自然開口表達的能力</span><span class="lang-en">Speak naturally</span></div></div>
+            <div class="outcome-pill"><span>5</span><div class="pair"><span class="lang-zh">面對新問題時自己思考</span><span class="lang-en">Think through new problems</span></div></div>
+            <div class="outcome-pill"><span>6</span><div class="pair"><span class="lang-zh">國外讀書或生活能用的英文</span><span class="lang-en">Use English for study and life abroad</span></div></div>
+          </div>
+        </div>
+        <div class="panel quote-panel">
+          <p class="pair">
+            <span class="lang-zh">「先找出原因，再針對問題訓練。」這是這門 1 對 1 課程的核心。</span>
+            <span class="lang-en">"Diagnose the cause first, then train the problem precisely." That is the core of this 1-on-1 course.</span>
+          </p>
+        </div>
+      </div>
+    </section>
+
+    <section class="cta guided-hidden after-skills">
+      <div class="shell cta-box">
+        <div>
+          <h2>
+            <span class="lang-zh">準備好重新檢查你的 IELTS 學習方式了嗎？</span>
+            <span class="lang-en">Ready to recheck how you study IELTS?</span>
+          </h2>
+          <p class="pair">
+            <span class="lang-zh">適合已經練習一段時間、想知道自己真正卡在哪裡，並希望用 1 對 1 方式補能力的學生。</span>
+            <span class="lang-en">Designed for students who have practiced for a while, want to understand the real bottleneck, and prefer focused 1-on-1 training.</span>
+          </p>
+        </div>
+        <a class="button primary" href="mailto:hello@example.com?subject=IELTS%201-on-1%20Course%20Inquiry">
+          <span class="lang-zh">預約課程診斷</span>
+          <span class="lang-en">Book a Diagnosis</span>
+        </a>
+      </div>
+    </section>
+  </main>
+
+  <script>
+    const buttons = document.querySelectorAll("[data-lang]");
+    const symptomChecks = document.querySelectorAll("[data-feedback-zh]");
+    const feedbackList = document.querySelector("#feedbackList");
+    const symptomNext = document.querySelector("#symptomNext");
+    const revealButtons = document.querySelectorAll("[data-reveal]");
+
+    function currentLang() {
+      return document.body.classList.contains("show-en") ? "en" : "zh";
+    }
+
+    function renderFeedback() {
+      const lang = currentLang();
+      const selected = Array.from(symptomChecks).filter((item) => item.checked);
+
+      if (!selected.length) {
+        feedbackList.innerHTML = "";
+        symptomNext.classList.add("guided-hidden");
+        return;
+      }
+
+      feedbackList.innerHTML = selected
+        .map((item) => `<div class="feedback-item">${item.dataset[`feedback${lang === "zh" ? "Zh" : "En"}`]}</div>`)
+        .join("");
+      symptomNext.classList.remove("guided-hidden");
+      symptomNext.scrollIntoView({ behavior: "smooth", block: "center" });
+    }
+
+    function revealSection(selector) {
+      const section = document.querySelector(selector);
+      if (!section) return;
+
+      section.classList.remove("guided-hidden");
+
+      if (selector === "#skills") {
+        document.querySelectorAll(".after-skills").forEach((item) => {
+          item.classList.remove("guided-hidden");
+        });
+      }
+
+      section.scrollIntoView({ behavior: "smooth", block: "start" });
+    }
+
+    buttons.forEach((button) => {
+      button.addEventListener("click", () => {
+        document.body.classList.remove("show-zh", "show-en");
+        buttons.forEach((item) => item.classList.remove("is-active"));
+        button.classList.add("is-active");
+
+        const lang = button.dataset.lang;
+        if (lang === "zh") document.body.classList.add("show-zh");
+        if (lang === "en") document.body.classList.add("show-en");
+        renderFeedback();
+      });
+    });
+
+    symptomChecks.forEach((check) => {
+      check.addEventListener("change", renderFeedback);
+    });
+
+    revealButtons.forEach((button) => {
+      button.addEventListener("click", () => {
+        revealSection(button.dataset.reveal);
+      });
+    });
+  </script>
+</body>
+</html>
